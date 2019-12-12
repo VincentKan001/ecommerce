@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import auth, messages
-
+from .forms import UserLoginForm
 
 # import in the login_required annonation
 from django.contrib.auth.decorators import login_required
@@ -21,4 +21,7 @@ def logout(request):
 This is login function
 """
 def login(request):
-    return render(request, "accounts/login.html")
+    form = UserLoginForm()
+    return render(request, "accounts/login.html",{
+        'form':form
+    })
