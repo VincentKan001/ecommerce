@@ -1,4 +1,5 @@
 from django.db import models
+from pyuploadcare.dj.models import ImageField
 
 # Create your models here.
 class Product(models.Model):
@@ -7,7 +8,7 @@ class Product(models.Model):
     description = models.TextField(blank=False)
     cost = models.IntegerField(blank=False)
     quantity = models.IntegerField(blank=False, default=0)
-    image = models.ImageField(blank=True, null=True)
+    photo = ImageField(null=True)
     
     def __str__(self):
         return self.name + " : " + self.sku
