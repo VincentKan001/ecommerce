@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pyuploadcare.dj',
     'crispy_forms',
-    'accounts'
+    'accounts',
+    'shop'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'ecommerce.urls'
@@ -120,6 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # use own user
 AUTH_USER_MODEL = 'accounts.MyUser'
@@ -136,3 +145,22 @@ LOGIN_URL = '/accounts/login'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# enable static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+
+UPLOADCARE_PUBLIC_KEY=os.environ['UPLOADCARE_PUBLIC_KEY']
+UPLOADCARE_SECRET_KEY=os.environ['UPLOADCARE_SECRET_KEY']
+
+UPLOADCARE = {
+    'pub_key': UPLOADCARE_PUBLIC_KEY,
+    'secret': UPLOADCARE_SECRET_KEY,
+}
