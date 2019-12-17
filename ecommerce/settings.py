@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts',
     'shop',
-    'cart'
+    'cart',
+    'checkout'
     
 ]
 
@@ -174,3 +175,6 @@ MAILGUN_SERVER_NAME="mg.geek-verse.com"
 
 DEFAULT_FROM_EMAIL = 'admin@mg.geek-verse.com'
 FROM_EMAIL = "admin@mg.geek-verse.com"
+
+STRIPE_PUBLISHABLE_KEY=os.environ['STRIPE_PUBLISHABLE_KEY']
+STRIPE_SECRET_KEY = os.environ['STRIPE_SECRET_KEY']
