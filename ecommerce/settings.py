@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'pyuploadcare.dj',
     'crispy_forms',
     'accounts',
-    'shop'
+    'shop',
+    'cart'
+    
 ]
 
 MIDDLEWARE = [
@@ -165,3 +167,10 @@ UPLOADCARE = {
     'pub_key': UPLOADCARE_PUBLIC_KEY,
     'secret':UPLOADCARE_SECRET_KEY
 }
+
+EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
+MAILGUN_ACCESS_KEY=os.environ['MAILGUN_PRIVATE_KEY']
+MAILGUN_SERVER_NAME="mg.geek-verse.com"
+
+DEFAULT_FROM_EMAIL = 'admin@mg.geek-verse.com'
+FROM_EMAIL = "admin@mg.geek-verse.com"
