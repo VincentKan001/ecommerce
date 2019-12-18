@@ -4,8 +4,10 @@ botocore==1.13.22
 certifi==2019.11.28
 chardet==3.0.4
 colorama==0.4.1
+dj-database-url==0.5.0
 Django==2.2.4
 django-crispy-forms==1.8.1
+django-mailgun==0.9.1
 docutils==0.15.2
 gunicorn==20.0.4
 idna==2.8
@@ -33,6 +35,7 @@ s3transfer==0.2.1
 six==1.13.0
 sqlparse==0.3.0
 stevedore==1.31.0
+stripe==2.41.0
 urllib3==1.25.7
 virtualenv==16.2.0
 virtualenv-clone==0.5.3
