@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<h3>You have selected the following item:</h3>
+<br>
 {%for cart_item in all_cart_items %}
 <div class="media">
   <img src="{{cart_item.product.photo.cdn_url}}" class="mr-3">
@@ -13,10 +14,13 @@
     <p>
         Cost: ${{cart_item.product.getCostInDollars}} <br/>
         Quantity: {{cart_item.quantity }}
-        <a href="{% url 'remove_from_cart' cart_item_id=cart_item.id %}">Remove</a>
+        <br>
+        <a class='btn btn-info' href="{% url 'remove_from_cart' cart_item_id=cart_item.id %}">Remove</a>
+        <a class='btn btn-warning mb-3 mt-3' href="{%url 'charge' %}">Proceed to Payment</a>
     </p>
   </div>
 </div>
 {%endfor%}
 
 {% endblock %}
+

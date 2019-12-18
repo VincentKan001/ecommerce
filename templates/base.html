@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'styles.css' %}" type="text/css" />
     <title>Hello, world!</title>
+    
   </head>
   <body>
     <div class='container'>
@@ -26,8 +27,12 @@
             </li>
             {%endif%}
             {%if user.is_authenticated %}
+            
             <li class="nav-item">
               <a class="nav-link" href="{% url "profile" %}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "catalog" %}">Catalog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'logout' %}">Logout</a>

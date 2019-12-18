@@ -2,5 +2,6 @@
 
 {% block content %}
 <p>Your total is {{total_cost}}</p>
-<a href="{%url 'charge' %}"/>Pay</a>
+
+<a class='btn btn-primary mb-3 mt-3' href="{%url 'charge' %}">Proceed to Payment</a>
 {% endblock %}

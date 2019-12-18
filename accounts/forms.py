@@ -19,6 +19,8 @@ User registration form
 class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput)
     password2 = forms.CharField(label="Password Confirmation", widget=forms.PasswordInput)
+    address = forms.CharField(widget=forms.TextInput)
+    mobile = forms.IntegerField(widget=forms.TextInput)
     
     def clean_email(self):
         User = get_user_model()
@@ -47,4 +49,4 @@ class UserRegistrationForm(UserCreationForm):
         
     class Meta:
         model = MyUser
-        fields = ['email', 'username', 'password1', 'password2']
+        fields = ['email', 'username', 'password1', 'password2','address','mobile']

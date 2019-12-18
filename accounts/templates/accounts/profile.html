@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block content%}
+{%block title %}   
+<h1>{{ user }}'s Profile</h1>
+{%endblock %}
+
+ <table>
+    <tr>
+      <th>User Name :</th>
+      <td>{{ user }}</td>
+    </tr> 
+    <tr>
+        <th>Registered Email :</th>
+        <td>{{ user.email }}</td>
+    </tr> 
+    <tr>
+        <th>Registered Address :</th>
+        <td>{{ user.address }}</td>
+    </tr> 
+    <tr>
+        <th>Registered Mobile :</th>
+        <td>{{ user.mobile }}</td>
+    </tr> 
+ </table>
+
+<a class='btn btn-info mb-3 mt-3' href="{%url 'view_cart' %}">View Cart</a>
+<a class='btn btn-warning mb-3 mt-3' href="{%url 'charge' %}">Proceed to Payment</a>
+        <br/>
+
+{%endblock %}

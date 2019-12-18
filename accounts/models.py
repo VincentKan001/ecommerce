@@ -5,4 +5,6 @@ from django.contrib.auth.models import AbstractUser
 
 class MyUser(AbstractUser):
     job_title = models.CharField(max_length=50, blank=False)
-   
+
+
+
