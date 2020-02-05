@@ -1,6 +1,6 @@
 LIVE DEMO LINK
 ==============
-https://project3-hr.herokuapp.com/
+https://project4-ecommerce.herokuapp.com/
 
 
 BACKGROUND:
