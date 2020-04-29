@@ -4,6 +4,7 @@
 
      <h1>Please feel free to browse our products:</h1>
       <a class='btn btn-dark mb-3 mt-3' href="{%url 'view_cart' %}">My Shopping Cart</a>
+      <a class="btn btn-light"> Add Product</a>
         <br/>
     <h3>Muay Thai Gloves</h3> 
 <div style='display:flex;justify-content:space-between'>
@@ -17,7 +18,9 @@
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>
             <p class="card-text">{{product.description}}</p>
-            <a href="{% url 'add_to_cart' product_id=product.id %}" class="btn btn-info">Add to cart</a>
+            <a href="{% url 'add_to_cart' product_id=product.id %}" class="btn btn-info">Add to cart</a></br>
+            <a class="btn btn-primary"> Edit </a>
+            <a class="btn btn-danger"> Delete </a>
         </div>
     </div>
     {%endfor%}
