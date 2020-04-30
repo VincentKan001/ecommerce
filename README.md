@@ -84,11 +84,26 @@ TESTING
 
 * Manual testing was constantly conducted to ensure successful deployment across the different platforms.
 
+* Manual testing for the following functions listed below:
+
+* Creating an account to enter and view site (Working)
+
+* Entering details into form and submitting form (Working)
+
+* Admin Panel that allows the Creating/Updating/Deleting of store items (Working) 
+
+* Allowing users to add to cart/Edit cart/Delete items from cart (Working)
+
+* Payment System allowing users to checkout via credit card (Working)
+
  
 
 DEPLOYMENT
 ==========
-* This site is hosted using heroku.
+* This site is hosted using Heroku App Link : https://project4-ecommerce.herokuapp.com/ All codes are uploaded to GitHub and links are made to Heroku by installing in bash terminal in projects.
+
+* Once project is complete, it is being push to heroku to deploy
+
 
 
 Credit
